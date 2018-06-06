@@ -13,6 +13,9 @@ import { MovieComponent } from './movie/movie.component';
 import { CONST_ROUTING } from './app.routing';
 
 import { SharedService } from './shared.service';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { AddressComponent } from './address/address.component';
+import { ChatComponent } from './chat/chat.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { SharedService } from './shared.service';
     MenuComponent,
     WeatherComponent,
     CurrencyComponent,
-    MovieComponent
+    MovieComponent,
+    AboutUsComponent,
+    AddressComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
