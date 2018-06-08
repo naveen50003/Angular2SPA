@@ -17,6 +17,10 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { AddressComponent } from './address/address.component';
 import { ChatComponent } from './chat/chat.component';
 
+import { AgePipe } from './movie/movie.pipe';
+import { HiddenDirective } from './movie/movie.directive';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +30,9 @@ import { ChatComponent } from './chat/chat.component';
     MovieComponent,
     AboutUsComponent,
     AddressComponent,
-    ChatComponent
+    ChatComponent,
+    AgePipe,
+    HiddenDirective
   ],
   imports: [
     BrowserModule,

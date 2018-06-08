@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { SharedService } from './../shared.service';
-
+import { HiddenDirective } from './movie.directive';
 @Component({
   selector: 'app-movie',
-  templateUrl: './movie.component.html',
-  styles: []
+  templateUrl: './movie.component.html'
 })
 export class MovieComponent implements OnInit {
 
@@ -16,6 +15,27 @@ export class MovieComponent implements OnInit {
   mv_Actors: string = "";
   mv_Plot: string = "";
 
+  sliderValue: number = 100;
+  people: Array<any> = [{
+      name: 'Justin Bieber',
+      age: 21
+    }, {
+      name: 'Miley Cyrus',
+      age: 23
+    }, {
+      name: 'John Legend',
+      age: 37
+    }, {
+      name: 'Betty White',
+      age: 94
+    }, {
+      name: 'Roger Waters',
+      age: 72
+    }, {
+      name: 'Larry Page',
+      age: 42
+    }
+  ];
   constructor(private _sharedService: SharedService) { }
 
   ngOnInit() {

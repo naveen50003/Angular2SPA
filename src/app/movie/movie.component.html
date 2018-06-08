@@ -19,3 +19,28 @@
     </p>
   </div>
 </div>
+<div class="col-md-2">
+  <p>
+    0
+      <input type="range" min="0" max="100" 
+            [value]="sliderValue" 
+            (input)="sliderValue = $event.target.value" />
+    100
+  </p>
+  <table class="table table-condensed table-bordered">
+    <thead>
+      <tr>
+        <td myBig>Name:</td>
+        <td myBig>Age:</td>
+        <td myBig>ID:</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let person of people|AgePipe:sliderValue;let i = index">
+        <td>{{person.name}}</td>
+        <td>{{person.age}}</td>
+        <td>{{i}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
